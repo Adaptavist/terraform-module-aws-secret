@@ -1,0 +1,39 @@
+data "aws_lambda_function" "secret_generator" {
+  function_name = var.secret_lambda_function_name
+}
+
+locals {
+  lambda_inputs = {
+    path                = var.secret_ssm_path
+    respectInitialValue = var.respect_initial_value
+    secretLength        = var.secret_length
+  }
+
+  lambda_outputs = []
+}
+
+
+resource "aws_cloudformation_stack" "execute_lambda" {
+  name = "create-secret${replace(var.secret_ssm_path, "/", "-")}-execution-stack"
+
+  timeout_in_minutes = "3"
+  template_body      = <<EOF
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Execute a Lambda which may populate a SSM parameter with a generated secret",
+  "Resources" : {
+    "GeneratePassword" : {
+      "Type": "AWS::CloudFormation::CustomResource",
+      "Version" : "1.0",
+      "Properties" :
+        ${jsonencode(merge(map("ServiceToken", data.aws_lambda_function.secret_generator.arn), local.lambda_inputs))}               
+    }
+  },
+  "Outputs": {
+    ${join(",", formatlist("\"%s\":{\"Value\": {\"Fn::GetAtt\":[\"ExecuteLambda\", \"%s\"]}}", local.lambda_outputs, local.lambda_outputs))}
+  }
+}
+EOF
+
+}
+
