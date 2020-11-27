@@ -16,3 +16,7 @@ variable "secret_lambda_function_name" {
   type    = string
   default = "ssm-secret-generator"
 }
+
+variable "tags" {
+  type = map(string)
+}

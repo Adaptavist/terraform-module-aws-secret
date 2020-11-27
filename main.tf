@@ -10,6 +10,12 @@ locals {
   }
 
   lambda_outputs = []
+
+  stageTag = {
+    "Avst:Stage:Name" = var.stage
+  }
+
+  finalTags = merge(var.tags, local.stageTag)
 }
 
 
@@ -34,6 +40,6 @@ resource "aws_cloudformation_stack" "execute_lambda" {
   }
 }
 EOF
-
+  tags               = local.finalTags
 }
 
