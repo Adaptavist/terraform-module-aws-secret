@@ -18,7 +18,6 @@ locals {
   finalTags = merge(var.tags, local.stageTag)
 }
 
-
 resource "aws_cloudformation_stack" "execute_lambda" {
   name = "create-secret${replace(var.secret_ssm_path, "/", "-")}-execution-stack"
 
@@ -42,4 +41,3 @@ resource "aws_cloudformation_stack" "execute_lambda" {
 EOF
   tags               = local.finalTags
 }
-
