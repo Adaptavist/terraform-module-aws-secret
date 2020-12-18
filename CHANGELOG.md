@@ -1,3 +1,10 @@
+## [1.0.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.0.1...v1.0.2) (2020-12-18)
+
+
+### Bug Fixes
+
+* forcing a release ([26ade57](http://bitbucket.org/adaptavistlabs/module-secret/commits/26ade57767a581fffe86e2381f58e96e0b44f32c))
+
 ## [1.0.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.0.0...v1.0.1) (2020-11-27)
 
 
