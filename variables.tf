@@ -24,3 +24,8 @@ variable "stage" {
 variable "tags" {
   type = map(string)
 }
+
+variable "regions" {
+  type    = list(string)
+  default = []
+}
