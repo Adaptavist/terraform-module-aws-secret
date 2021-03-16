@@ -1,3 +1,10 @@
+# [1.1.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.0.2...v1.1.0) (2021-03-16)
+
+
+### Features
+
+* **regions:** support replication across regions ([2a85a3b](http://bitbucket.org/adaptavistlabs/module-secret/commits/2a85a3bb26641a27e960c36079335eef9bcc885d))
+
 ## [1.0.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.0.1...v1.0.2) (2020-12-18)
 
 
