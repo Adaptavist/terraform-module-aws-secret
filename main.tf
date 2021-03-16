@@ -2,11 +2,15 @@ data "aws_lambda_function" "secret_generator" {
   function_name = var.secret_lambda_function_name
 }
 
+
+data "aws_region" "current" {}
+
 locals {
   lambda_inputs = {
     path                = var.secret_ssm_path
     respectInitialValue = var.respect_initial_value
     secretLength        = var.secret_length
+    regions             = length(var.regions) != 0 ? var.regions : [data.aws_region.current.name]
   }
 
   lambda_outputs = []
@@ -31,7 +35,7 @@ resource "aws_cloudformation_stack" "execute_lambda" {
       "Type": "AWS::CloudFormation::CustomResource",
       "Version" : "1.0",
       "Properties" :
-        ${jsonencode(merge(map("ServiceToken", data.aws_lambda_function.secret_generator.arn), local.lambda_inputs))}               
+        ${jsonencode(merge(map("ServiceToken", data.aws_lambda_function.secret_generator.arn), local.lambda_inputs))}
     }
   },
   "Outputs": {
