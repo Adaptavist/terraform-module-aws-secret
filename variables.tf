@@ -26,6 +26,6 @@ variable "tags" {
 }
 
 variable "regions" {
-  type = list(string)
+  type    = list(string)
   default = []
 }
