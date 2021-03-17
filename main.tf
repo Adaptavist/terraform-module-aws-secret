@@ -23,7 +23,7 @@ locals {
 }
 
 resource "aws_cloudformation_stack" "execute_lambda" {
-  name = "create-secret${replace(var.secret_ssm_path, "/", "-")}-execution-stack"
+  name = "create-secret${replace(var.secret_ssm_path, "/[:\/]/", "-")}-execution-stack"
 
   timeout_in_minutes = "3"
   template_body      = <<EOF
