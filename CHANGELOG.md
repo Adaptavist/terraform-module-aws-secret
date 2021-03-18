@@ -1,3 +1,10 @@
+## [1.1.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.1.0...v1.1.1) (2021-03-18)
+
+
+### Bug Fixes
+
+* **formatting:** replace colon, forward slash and period in CF name ([b089058](http://bitbucket.org/adaptavistlabs/module-secret/commits/b08905851992ed9a10e2d5aaaa60dc3f7b2e2e2f))
+
 # [1.1.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.0.2...v1.1.0) (2021-03-16)
 
 
