@@ -7,13 +7,10 @@ definitions:
       - terraform fmt -check -recursive -diff
 
   release: &release
-    name: Release
-    image: node:13
-    caches:
-      - node
-    script:
-      - npm install --save-dev
-      - npx semantic-release -r ${BITBUCKET_GIT_HTTP_ORIGIN}
+      name: release
+      image: ghcr.io/adaptavist/docker-semantic-release:17.4.2-alpine3.11
+      script:
+        - semantic-release -r ${BITBUCKET_GIT_HTTP_ORIGIN}
 
 pipelines:
   default:
