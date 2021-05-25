@@ -1,3 +1,15 @@
+# [1.2.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.1.2...v1.2.0) (2021-05-25)
+
+
+### Bug Fixes
+
+* using newer release mechanism ([381d921](http://bitbucket.org/adaptavistlabs/module-secret/commits/381d9213b46ad6ca3837842744ec5c4e56a7a848))
+
+
+### Features
+
+* added checkov ([482e990](http://bitbucket.org/adaptavistlabs/module-secret/commits/482e990b82267b7d2e574cd03cc6c1d97790aa4c))
+
 ## [1.1.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.1.1...v1.1.2) (2021-05-25)
 
 
