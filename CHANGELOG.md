@@ -1,3 +1,10 @@
+## [1.1.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.1.1...v1.1.2) (2021-05-25)
+
+
+### Bug Fixes
+
+* fixing issue with escape coding in CF stack names ([9c7ae9b](http://bitbucket.org/adaptavistlabs/module-secret/commits/9c7ae9b3ca992213567372d5b6c4eb94dd5f3bbe))
+
 ## [1.1.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.1.0...v1.1.1) (2021-03-18)
 
 
