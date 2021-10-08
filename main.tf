@@ -35,7 +35,7 @@ resource "aws_cloudformation_stack" "execute_lambda" {
       "Type": "AWS::CloudFormation::CustomResource",
       "Version" : "1.0",
       "Properties" :
-        ${jsonencode(merge(map("ServiceToken", data.aws_lambda_function.secret_generator.arn), local.lambda_inputs))}
+        ${jsonencode(merge(tomap("ServiceToken", data.aws_lambda_function.secret_generator.arn), local.lambda_inputs))}
     }
   },
   "Outputs": {
