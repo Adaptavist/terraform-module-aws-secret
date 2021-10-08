@@ -1,3 +1,10 @@
+## [1.2.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.2.0...v1.2.1) (2021-10-08)
+
+
+### Bug Fixes
+
+* using tomap ([f38e90e](http://bitbucket.org/adaptavistlabs/module-secret/commits/f38e90ed5fb97e9b1359e55265439cc2a3ddf5ec))
+
 # [1.2.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.1.2...v1.2.0) (2021-05-25)
 
 
