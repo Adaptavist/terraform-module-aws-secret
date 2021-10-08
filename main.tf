@@ -26,7 +26,7 @@ resource "aws_cloudformation_stack" "execute_lambda" {
   name = "create-secret${replace(var.secret_ssm_path, "/[:_/.]/", "-")}-execution-stack"
 
   timeout_in_minutes = "3"
-  template_body      = <<EOF
+  template_body = <<EOF
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
   "Description" : "Execute a Lambda which may populate a SSM parameter with a generated secret",
@@ -36,10 +36,10 @@ resource "aws_cloudformation_stack" "execute_lambda" {
       "Version" : "1.0",
       "Properties" :
         ${jsonencode(merge(tomap(
-            {
-                ServiceToken = data.aws_lambda_function.secret_generator.arn
-            }
-        ), local.lambda_inputs))}
+  {
+    ServiceToken = data.aws_lambda_function.secret_generator.arn
+  }
+), local.lambda_inputs))}
     }
   },
   "Outputs": {
@@ -47,5 +47,5 @@ resource "aws_cloudformation_stack" "execute_lambda" {
   }
 }
 EOF
-  tags               = local.finalTags
+tags = local.finalTags
 }
