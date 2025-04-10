@@ -29,3 +29,9 @@ variable "regions" {
   type    = list(string)
   default = []
 }
+
+variable "name_suffix" {
+  type        = string
+  default     = ""
+  description = "suffix for stack name if needed for avoiding conflicts"
+}
