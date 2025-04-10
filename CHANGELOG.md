@@ -1,3 +1,10 @@
+# [1.3.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.2.2...v1.3.0) (2025-04-10)
+
+
+### Features
+
+* adding name_suffix for avoiding possible conflicts ([cea7461](http://bitbucket.org/adaptavistlabs/module-secret/commits/cea74612e2c2507d223ed3454a59e48c175b302e))
+
 ## [1.2.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.2.1...v1.2.2) (2021-10-08)
 
 
