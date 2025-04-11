@@ -1,3 +1,10 @@
+## [1.3.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.3.1...v1.3.2) (2025-04-11)
+
+
+### Bug Fixes
+
+* variable ([aa5ab40](http://bitbucket.org/adaptavistlabs/module-secret/commits/aa5ab401e9b449ac4a14b27c1bc88fdfdaf21ecf))
+
 ## [1.3.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.3.0...v1.3.1) (2025-04-11)
 
 
