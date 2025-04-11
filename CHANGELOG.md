@@ -1,3 +1,10 @@
+## [1.3.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.3.0...v1.3.1) (2025-04-11)
+
+
+### Bug Fixes
+
+* trigger deployment ([6580968](http://bitbucket.org/adaptavistlabs/module-secret/commits/6580968d48f1892dc170212cb3deb9bb266a40d3))
+
 # [1.3.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.2.2...v1.3.0) (2025-04-10)
 
 
