@@ -2,7 +2,6 @@ data "aws_lambda_function" "secret_generator" {
   function_name = var.secret_lambda_function_name
 }
 
-
 data "aws_region" "current" {}
 
 locals {
@@ -10,7 +9,6 @@ locals {
     path                = var.secret_ssm_path
     respectInitialValue = var.respect_initial_value
     secretLength        = var.secret_length
-    regions             = length(var.regions) != 0 ? var.regions : [data.aws_region.current.name]
   }
 
   lambda_outputs = []
