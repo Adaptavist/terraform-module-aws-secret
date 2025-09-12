@@ -20,8 +20,13 @@ locals {
   finalTags = merge(var.tags, local.stageTag)
 }
 
+# this is generated at initial resource creation and then not modified afterwards
+resource "random_id" "cf_stack" {
+  byte_length = 8
+}
+
 resource "aws_cloudformation_stack" "execute_lambda" {
-  name = "create-secret${replace(var.secret_ssm_path, "/[:_/.]/", "-")}-execution-stack${var.name_suffix}"
+  name = "create-secret-${random_id.cf_stack.id}-execution-stack${var.name_suffix}"
 
   timeout_in_minutes = "3"
   template_body = <<EOF
