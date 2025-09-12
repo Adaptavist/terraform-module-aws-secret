@@ -1,3 +1,19 @@
+# [2.0.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.3.2...v2.0.0) (2025-09-12)
+
+
+### Bug Fixes
+
+* remove multi-region support ([33aa2bf](http://bitbucket.org/adaptavistlabs/module-secret/commits/33aa2bf9d80fa6d3b7bf3dca1e8db06b86631427))
+* use random chars for cloudformation stack ([83fde3f](http://bitbucket.org/adaptavistlabs/module-secret/commits/83fde3f8e6194f4be46e288486dd0d4a3281db99))
+
+
+### BREAKING CHANGES
+
+* Stop using SSM param name in name of cloudformation stack.
+
+This allows changes to the SSM param name to be propagated to the underlying lambda function that backs the secret generation, as opposed to changing the cloudformation stack if the SSM param name changes
+* No more support for multiple regions.
+
 ## [1.3.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.3.1...v1.3.2) (2025-04-11)
 
 
