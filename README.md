@@ -24,6 +24,7 @@ See the below diagram which outlines the creation of a secret.
 | secret_lambda_function_name | The name of the function to call which will populate the secret with a value. This is optional. |
 | secret_length | The length of the secret that should be generated. |
 | respect_initial_value | If 'true', the secret will be added to the stack but its value will not be replaced with a generated value. This is useful for existing secrets that require importing ito IaC whose value needs to remain. Once imported, if the value needs to be changed to generated value at a later date the resource should have a terraform taint applied then a terraform apply. The secret will get replaced with a generated value. |
-| regions | A list of regions in which the secrets will be created (replicated). Defaults to caller's region.
 
+## Breaking changes
 
+Version 1.1.0 introduced support for multiple regions which was flawed. Version 2.0.0 removes this support alongside changes to https://bitbucket.org/adaptavistlabs/module-secret-generator/src
