@@ -1,3 +1,10 @@
+## [2.0.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.0.0...v2.0.1) (2025-09-15)
+
+
+### Bug Fixes
+
+* only use alphanumerics for cf stack name ([593ff62](http://bitbucket.org/adaptavistlabs/module-secret/commits/593ff628b5f166873cefe3c73a1b882aa053737e))
+
 # [2.0.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v1.3.2...v2.0.0) (2025-09-12)
 
 
