@@ -21,12 +21,13 @@ locals {
 }
 
 # this is generated at initial resource creation and then not modified afterwards
-resource "random_id" "cf_stack" {
-  byte_length = 8
+resource "random_string" "cf_stack" {
+  length  = 8
+  special = false
 }
 
 resource "aws_cloudformation_stack" "execute_lambda" {
-  name = "create-secret-${random_id.cf_stack.id}-execution-stack${var.name_suffix}"
+  name = "create-secret-${random_string.cf_stack.result}-execution-stack${var.name_suffix}"
 
   timeout_in_minutes = "3"
   template_body = <<EOF
