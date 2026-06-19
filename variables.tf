@@ -38,6 +38,6 @@ variable "name_suffix" {
 
 variable "keep_param_on_delete" {
   type        = bool
-  default     = true
+  default     = false
   description = "If true, the SSM parameter will not be deleted when the CloudFormation stack is destroyed."
 }
