@@ -1,3 +1,10 @@
+# [2.1.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.0.1...v2.1.0) (2026-06-19)
+
+
+### Features
+
+* add keep_param_on_delete option to prevent SSM parameter deletion on stack destroy ([e86d5a3](http://bitbucket.org/adaptavistlabs/module-secret/commits/e86d5a33d27ceef04ce891f12a888b84a7d91829))
+
 ## [2.0.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.0.0...v2.0.1) (2025-09-15)
 
 
