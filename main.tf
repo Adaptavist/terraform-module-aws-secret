@@ -9,6 +9,7 @@ locals {
     path                = var.secret_ssm_path
     respectInitialValue = var.respect_initial_value
     secretLength        = var.secret_length
+    keepParamOnDelete   = var.keep_param_on_delete
   }
 
   lambda_outputs = []
