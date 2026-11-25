@@ -1,3 +1,9 @@
+## [2.1.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.1.0...v2.1.1) (2026-11-25)
+
+### Bug Fixes
+
+* **ci:** AVSTCLOUD-5005 replace EOL semantic-release image ([9eb2466](http://bitbucket.org/adaptavistlabs/module-secret/commits/9eb246695e9755a15e5d421cc97053ae6cc988e6))
+
 # [2.1.0](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.0.1...v2.1.0) (2026-06-19)
 
 
