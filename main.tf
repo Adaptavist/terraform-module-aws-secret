@@ -1,3 +1,16 @@
+terraform {
+  required_version = ">= 1.0"
+
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+    random = {
+      source = "hashicorp/random"
+    }
+  }
+}
+
 data "aws_lambda_function" "secret_generator" {
   function_name = var.secret_lambda_function_name
 }
