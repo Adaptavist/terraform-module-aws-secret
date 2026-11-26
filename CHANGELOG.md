@@ -1,3 +1,9 @@
+## [2.1.2](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.1.1...v2.1.2) (2026-11-26)
+
+### Bug Fixes
+
+* AVSTCLOUD-5002 upgrade Terraform to 1.17.2 ([3c2cb6b](http://bitbucket.org/adaptavistlabs/module-secret/commits/3c2cb6b7c43b390f852ae0b754a9135999dd3d76))
+
 ## [2.1.1](http://bitbucket.org/adaptavistlabs/module-secret/compare/v2.1.0...v2.1.1) (2026-11-25)
 
 ### Bug Fixes
